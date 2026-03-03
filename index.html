@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thepharmafile | Pharmacology & Toxicology Learning Hub</title>
+    <meta
+      name="description"
+      content="A modern learning website for pharmacy students covering pharmacology, toxicology, and emerging pharmaceutical techniques."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar container">
+        <h1 class="brand">THEPHARMAFILE</h1>
+        <a class="btn small" href="#feature-catalogue">View Catalogue</a>
+      </nav>
+      <div class="hero-content container hero-grid">
+        <div>
+          <p class="tag">Built for Pharmacy Students</p>
+          <h2>Master Pharmacology with a Simple, Visual & Practical Learning Theme</h2>
+          <p>
+            Learn through an educational pharmacology experience designed with friendly
+            visuals of lab rats, injections, and chemicals—plus interactive tools for
+            molecules, protocols, and fast exam revision.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#topics">Explore Topics</a>
+            <a class="btn secondary" href="#protocol-bench">Start Practical Protocols</a>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="Medical themed educational graphics">
+          <div class="hero-icon-card"><span>🩺</span><p>Clinical Skills</p></div>
+          <div class="hero-icon-card"><span>💉</span><p>Injection Techniques</p></div>
+          <div class="hero-icon-card"><span>🧪</span><p>Chemical Analysis</p></div>
+          <div class="hero-icon-card"><span>🧬</span><p>Molecular Medicine</p></div>
+          <div class="hero-icon-card"><span>🏥</span><p>Hospital Pharmacy</p></div>
+          <div class="hero-icon-card"><span>🧫</span><p>Lab Diagnostics</p></div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+
+      <section id="feature-catalogue" class="section container">
+        <h3>Feature Menu Catalogue</h3>
+        <p class="section-subtitle">
+          Quick access menu of all learning and practical tools available on thepharmafile.
+        </p>
+        <div class="catalogue-grid">
+          <article class="catalogue-card"><h4>Core Learning Tracks</h4><p>System-wise pharmacology, toxicology, pharmaceutics, research and exam prep.</p></article>
+          <article class="catalogue-card"><h4>3D Molecule Studio</h4><p>Interactive 3D structures with mechanism, use, and toxicology profile notes.</p></article>
+          <article class="catalogue-card"><h4>Trending Techniques</h4><p>AI drug discovery, pharmacogenomics, biologics, nanomedicine and digital therapeutics.</p></article>
+          <article class="catalogue-card"><h4>Interactive Virtual Bench Protocols</h4><p>Protocol builder for dissolution, HPLC, sterility, tox screening, and IV compounding.</p></article>
+          <article class="catalogue-card"><h4>Mnemonic Vault</h4><p>Category-based mnemonics with simple educational graphics for revision.</p></article>
+          <article class="catalogue-card"><h4>Learner Contact & Updates</h4><p>Reach support, mentorship desk, and subscribe for learning updates.</p></article>
+        </div>
+      </section>
+
+
+
+
+      <section id="topics" class="section container">
+        <h3>Core Learning Tracks</h3>
+        <p class="section-subtitle">
+          Search for a topic and jump directly into the subjects you want to revise.
+        </p>
+
+        <label class="search-wrap" for="topic-search">
+          <span>Find a topic:</span>
+          <input
+            id="topic-search"
+            type="text"
+            placeholder="Try: antihypertensives, organophosphate poisoning, pharmacokinetics..."
+          />
+        </label>
+
+        <div class="card-grid" id="topic-grid">
+          <article class="card" data-keywords="pharmacology autonomic nervous system adrenergic cholinergic">
+            <h4>General & Systemic Pharmacology</h4>
+            <p>
+              Drug-receptor interactions, ADME, dose-response curves, and system-wise
+              pharmacology (CNS, CVS, ANS, endocrine, antimicrobial agents).
+            </p>
+          </article>
+
+          <article class="card" data-keywords="toxicology poison management antidotes medico legal">
+            <h4>Toxicology & Poison Management</h4>
+            <p>
+              Mechanisms of toxicity, toxidromes, antidotes, poisoning case triage,
+              decontamination methods, and forensic toxicology basics.
+            </p>
+          </article>
+
+          <article class="card" data-keywords="clinical pharmacy therapeutics case studies evidence based medicine">
+            <h4>Clinical Pharmacy & Therapeutics</h4>
+            <p>
+              Rational prescribing, drug interactions, adverse drug reaction monitoring,
+              patient counseling, and pharmacovigilance practices.
+            </p>
+          </article>
+
+          <article class="card" data-keywords="pharmacokinetics biopharmaceutics dosage form design">
+            <h4>Pharmaceutics & Biopharmaceutics</h4>
+            <p>
+              Dosage form design, controlled drug delivery, bioavailability,
+              bioequivalence, and quality-by-design principles.
+            </p>
+          </article>
+
+          <article class="card" data-keywords="research methodology biostatistics publication ethics">
+            <h4>Research & Academic Skills</h4>
+            <p>
+              Study design, literature review, critical appraisal, biostatistics,
+              scientific writing, and publication ethics.
+            </p>
+          </article>
+
+          <article class="card" data-keywords="exam prep mnemonics quiz revision resources">
+            <h4>Exam Prep Zone</h4>
+            <p>
+              High-yield summaries, quick revision charts, mnemonics, and practice quiz
+              recommendations for semester and competitive exams.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="molecule-lab" class="section alt">
+        <div class="container">
+          <h3>3D Pharmacy Molecule Studio</h3>
+          <p class="section-subtitle">
+            Rotate and inspect important molecules, then review their pharmacy profile and practical relevance.
+          </p>
+
+          <div class="molecule-layout">
+            <aside class="molecule-list" aria-label="Molecule options">
+              <button class="molecule-btn active" data-molecule="aspirin" type="button">Aspirin</button>
+              <button class="molecule-btn" data-molecule="paracetamol" type="button">Paracetamol</button>
+              <button class="molecule-btn" data-molecule="caffeine" type="button">Caffeine</button>
+            </aside>
+
+            <div class="molecule-viewer-wrap">
+              <canvas id="molecule-canvas" width="520" height="340" aria-label="3D molecule viewer"></canvas>
+              <div class="viewer-help">Drag to rotate • Scroll to zoom</div>
+            </div>
+
+            <article class="molecule-profile" id="molecule-profile">
+              <h4 id="molecule-name">Aspirin (Acetylsalicylic acid)</h4>
+              <p id="molecule-use"><strong>Clinical use:</strong> Analgesic, antipyretic, anti-inflammatory, and antiplatelet therapy.</p>
+              <p id="molecule-mech"><strong>Mechanism:</strong> Irreversible cyclooxygenase inhibition, reducing prostaglandin and thromboxane synthesis.</p>
+              <p id="molecule-toxic"><strong>Toxicology note:</strong> Overdose may cause salicylate toxicity with tinnitus, acid-base disturbance, and hyperventilation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="trending" class="section">
+        <div class="container">
+          <h3>Latest & Trending Pharmacy Techniques</h3>
+          <div class="trend-list">
+            <article>
+              <h4>AI in Drug Discovery</h4>
+              <p>Machine learning for target identification, molecule optimization, and repurposing studies.</p>
+            </article>
+            <article>
+              <h4>Pharmacogenomics</h4>
+              <p>Personalized therapy decisions using genetic markers to improve efficacy and reduce toxicity.</p>
+            </article>
+            <article>
+              <h4>mRNA & Advanced Biologics</h4>
+              <p>Emerging vaccine and therapeutic platforms reshaping translational pharmacy research.</p>
+            </article>
+            <article>
+              <h4>Nanomedicine</h4>
+              <p>Nanocarriers for targeted delivery, improved solubility, and controlled release profiles.</p>
+            </article>
+            <article>
+              <h4>Digital Therapeutics & Remote Monitoring</h4>
+              <p>Software-guided interventions and wearable-linked medication adherence monitoring.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <section id="protocol-bench" class="section alt">
+        <div class="container">
+          <h3>Interactive Virtual Bench Protocols</h3>
+          <p class="section-subtitle">
+            Select any practical protocol, follow step-by-step workflow, and generate educational outcomes for pharmacy lab learning.
+          </p>
+
+          <div class="protocol-grid">
+            <article class="lab-card">
+              <h4>Protocol Builder</h4>
+              <label>
+                Protocol Type
+                <select id="protocol-type">
+                  <option value="dissolution">Tablet Dissolution Test</option>
+                  <option value="hplc">HPLC Assay Simulation</option>
+                  <option value="sterility">Sterility Testing Protocol</option>
+                  <option value="tox-screen">Toxicology Screening</option>
+                  <option value="iv-compounding">IV Admixture Compounding</option>
+                </select>
+              </label>
+              <label>
+                Sample Count: <span id="sample-count-value">6</span>
+                <input id="sample-count" type="range" min="1" max="12" step="1" value="6" />
+              </label>
+              <label>
+                Precision Level: <span id="precision-value">75</span>%
+                <input id="precision-level" type="range" min="40" max="100" step="5" value="75" />
+              </label>
+              <button class="btn" id="generate-protocol" type="button">Generate Protocol Run</button>
+            </article>
+
+            <article class="lab-card">
+              <h4>Protocol Steps</h4>
+              <ol id="protocol-steps">
+                <li>Select a protocol and click generate to load instructions.</li>
+              </ol>
+            </article>
+
+            <article class="lab-card">
+              <h4>Practical Outcome</h4>
+              <p id="protocol-summary">Your simulated protocol results and interpretation will appear here.</p>
+              <ul id="protocol-results"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="mnemonic-vault" class="section">
+        <div class="container">
+          <h3>Mnemonic Vault for Exam Revision</h3>
+          <p class="section-subtitle">
+            Quick memory hooks for key drug classifications with simple educational icons for faster recall.
+          </p>
+
+          <div class="mnemonic-toolbar" role="tablist" aria-label="Mnemonic filters">
+            <button class="mnemonic-filter active" data-category="all" type="button">All</button>
+            <button class="mnemonic-filter" data-category="autonomic" type="button">Autonomic</button>
+            <button class="mnemonic-filter" data-category="antimicrobial" type="button">Antimicrobial</button>
+            <button class="mnemonic-filter" data-category="cardio" type="button">Cardiovascular</button>
+            <button class="mnemonic-filter" data-category="cns" type="button">CNS</button>
+          </div>
+
+          <div class="mnemonic-grid">
+            <article class="mnemonic-card" data-category="autonomic">
+              <div class="mnemonic-icon" aria-hidden="true">🫀</div>
+              <h4>β-blockers (selective): A-B-C-D</h4>
+              <p><strong>A-B-C-D:</strong> Atenolol, Bisoprolol, Celiprolol, (β1) selective profile.</p>
+            </article>
+
+            <article class="mnemonic-card" data-category="antimicrobial">
+              <div class="mnemonic-icon" aria-hidden="true">🦠</div>
+              <h4>Aminoglycosides: "Very Toxic, No?"</h4>
+              <p><strong>V-T-N:</strong> Vestibular toxicity, Tinnitus, Nephrotoxicity—monitor drug levels.</p>
+            </article>
+
+            <article class="mnemonic-card" data-category="cardio">
+              <div class="mnemonic-icon" aria-hidden="true">💓</div>
+              <h4>Antiarrhythmics Class I: "Double Quarter Pounder"</h4>
+              <p><strong>IA/IB/IC:</strong> Quinidine, Procainamide, Disopyramide | Lidocaine, Mexiletine | Flecainide, Propafenone.</p>
+            </article>
+
+            <article class="mnemonic-card" data-category="cns">
+              <div class="mnemonic-icon" aria-hidden="true">🧠</div>
+              <h4>Opioid Toxicity Triad: "C-C-R"</h4>
+              <p><strong>C-C-R:</strong> Coma, Constricted pupils, Respiratory depression.</p>
+            </article>
+
+            <article class="mnemonic-card" data-category="antimicrobial">
+              <div class="mnemonic-icon" aria-hidden="true">💊</div>
+              <h4>Macrolides: "E-C-A"</h4>
+              <p><strong>E-C-A:</strong> Erythromycin, Clarithromycin, Azithromycin.</p>
+            </article>
+
+            <article class="mnemonic-card" data-category="autonomic">
+              <div class="mnemonic-icon" aria-hidden="true">⚡</div>
+              <h4>Anticholinergic Features: "Hot, Blind, Dry, Mad"</h4>
+              <p>Hyperthermia, mydriasis/blurred vision, dry skin/mouth, delirium.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="equipment-library" class="section alt">
+        <div class="container">
+          <h3>Pharmaceutical Lab Equipment Learning Library</h3>
+          <p class="section-subtitle">
+            Learn key lab instruments with easy notes, related images, and short video references for practical understanding.
+          </p>
+
+          <label class="search-wrap" for="equipment-search">
+            <span>Search equipment:</span>
+            <input id="equipment-search" type="text" placeholder="Try: autoclave, HPLC, dissolution, centrifuge..." />
+          </label>
+
+          <div class="equipment-grid" id="equipment-grid">
+            <article class="equipment-card" data-keywords="hplc high performance liquid chromatography assay separation quality control">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/HPLC_System.jpg/640px-HPLC_System.jpg" alt="HPLC system in a pharmaceutical laboratory" />
+              <h4>HPLC System</h4>
+              <p><strong>Use:</strong> Separates and quantifies compounds in complex drug samples.</p>
+              <p><strong>Applications:</strong> Assay of APIs, impurity profiling, stability studies, and batch QC release.</p>
+              <a href="https://www.youtube.com/results?search_query=hplc+pharmaceutical+analysis" target="_blank" rel="noopener noreferrer">Watch related video</a>
+            </article>
+
+            <article class="equipment-card" data-keywords="autoclave sterilization moist heat microbiology sterile products">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Vertical_Autoclave.jpg/640px-Vertical_Autoclave.jpg" alt="Autoclave used for pharmaceutical sterilization" />
+              <h4>Autoclave</h4>
+              <p><strong>Use:</strong> Sterilizes media, glassware, and instruments using pressurized steam.</p>
+              <p><strong>Applications:</strong> Sterility assurance in microbiology labs and sterile formulation preparation workflows.</p>
+              <a href="https://www.youtube.com/results?search_query=autoclave+pharmaceutical+lab" target="_blank" rel="noopener noreferrer">Watch related video</a>
+            </article>
+
+            <article class="equipment-card" data-keywords="dissolution tester tablet release biopharmaceutics quality control">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dissolution_test_apparatus.jpg/640px-Dissolution_test_apparatus.jpg" alt="Dissolution test apparatus for oral dosage forms" />
+              <h4>Dissolution Test Apparatus</h4>
+              <p><strong>Use:</strong> Measures drug release from tablets/capsules in simulated physiological media.</p>
+              <p><strong>Applications:</strong> Formulation optimization, bio-relevant testing, and routine dissolution compliance checks.</p>
+              <a href="https://www.youtube.com/results?search_query=dissolution+test+apparatus+pharmacy" target="_blank" rel="noopener noreferrer">Watch related video</a>
+            </article>
+
+            <article class="equipment-card" data-keywords="centrifuge separation plasma serum particulate clarification">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Laboratory_centrifuge.jpg/640px-Laboratory_centrifuge.jpg" alt="Laboratory centrifuge equipment" />
+              <h4>Laboratory Centrifuge</h4>
+              <p><strong>Use:</strong> Separates components by density using rapid rotational force.</p>
+              <p><strong>Applications:</strong> Sample preparation, plasma/serum separation, precipitate collection, and analytical cleanup.</p>
+              <a href="https://www.youtube.com/results?search_query=centrifuge+pharmaceutical+laboratory" target="_blank" rel="noopener noreferrer">Watch related video</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="container">
+          <h3>Contact & Academic Support</h3>
+          <p class="section-subtitle">Connect with thepharmafile team for doubts, mentorship and collaboration.</p>
+          <div class="contact-grid">
+            <article class="catalogue-card">
+              <h4>Student Helpdesk</h4>
+              <p>Email: support@thepharmafile.edu</p>
+              <p>Phone: 9441234395</p>
+              <p>Hours: Mon-Sat, 9:00 AM - 7:00 PM</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <h3>Stay Updated</h3>
+        <p class="section-subtitle">Join the learner community and get weekly topic highlights.</p>
+        <form id="newsletter-form" class="newsletter">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p id="form-message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>© <span id="year"></span> thepharmafile</p>
+        <p>Learn smart. Practice safely. Innovate responsibly.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/3dmol@2.0.4/build/3Dmol-min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
